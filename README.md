@@ -2,6 +2,11 @@
 
 ML Dataset Explorer is a modern, minimalist UI platform designed for learners and practitioners to experiment with prefilled datasets and understand how they impact machine learning model performance. The platform provides an interactive environment where users can compare different ML models (e.g., classification, regression) using dynamic visualizations, making it easy to grasp which datasets yield the best results and why.
 
+### Deployed version
+
+You can experience ML Dataset Explorer directly via this deployment:  
+[https://ml-dataset-explorer.vercel.app/](https://ml-dataset-explorer.vercel.app/)
+
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
