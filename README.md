@@ -24,11 +24,6 @@ ML Dataset Explorer serves as an educational tool that bridges the gap between t
 - **Responsive Design:** Enjoy a consistent user experience across desktops, tablets, and mobile devices.
 - **Clean & Minimalist UI:** Focus on clarity and ease of use with a modern design that encourages interactive learning.
 
-## Screenshots
-*Add screenshots here to showcase your UI design.*  
-For example:  
-![Dashboard Screenshot](path/to/screenshot.png)
-
 ## Installation
 
 ### Prerequisites
