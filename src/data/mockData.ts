@@ -165,6 +165,18 @@ export const mockDatasets = [{
     pixel_4: 16,
     label: 4
   }]
+}, {
+  id: "sentiment",
+  name: "Sentiment Analysis Dataset",
+  description: "A dataset for sentiment analysis on social media posts",
+  recordCount: 1000,
+  features: 1,
+  type: "Text Classification",
+  columns: ["text", "sentiment"],
+  previewData: [
+    { text: "I love this product!", sentiment: "positive" },
+    { text: "This experience was terrible.", sentiment: "negative" }
+  ]
 }];
 // Mock Models
 export const mockModels = [{
@@ -212,6 +224,16 @@ export const mockModels = [{
   name: "K-Nearest Neighbors",
   type: "Classification",
   description: "A non-parametric method used for classification and regression"
+}, {
+  id: "xgboost",
+  name: "XGBoost",
+  type: "Classification",
+  description: "An optimized gradient boosting machine learning library"
+}, {
+  id: "lightgbm",
+  name: "LightGBM",
+  type: "Classification",
+  description: "A fast, high performance gradient boosting framework"
 }];
 // Mock Performance Data
 export const mockPerformanceData = [{
@@ -335,6 +357,28 @@ export const mockPerformanceData = [{
     trainingTime: 0.12
   },
   color: "#6B46C1" // purple-700
+}, {
+  modelId: "xgboost",
+  datasetId: "sentiment",
+  metrics: {
+    accuracy: 0.88,
+    precision: 0.87,
+    recall: 0.86,
+    f1Score: 0.865,
+    trainingTime: 0.35
+  },
+  color: "#805AD5"
+}, {
+  modelId: "lightgbm",
+  datasetId: "sentiment",
+  metrics: {
+    accuracy: 0.90,
+    precision: 0.89,
+    recall: 0.88,
+    f1Score: 0.885,
+    trainingTime: 0.30
+  },
+  color: "#D69E2E"
 }];
 // Mock Data Insights
 export const mockDataInsights = [{
@@ -409,6 +453,28 @@ export const mockDataInsights = [{
     suitable: false,
     reason: "May struggle with the complex, non-linear patterns in handwritten digits."
   }]
+}, {
+  id: "insight_sentiment_1",
+  datasetId: "sentiment",
+  title: "Sentiment Polarity Distribution",
+  description: "Balanced distribution of positive and negative sentiments across the dataset.",
+  recommendations: [
+    {
+      modelType: "XGBoost",
+      suitable: true,
+      reason: "Effective in capturing nuances in text data."
+    },
+    {
+      modelType: "LightGBM",
+      suitable: true,
+      reason: "Fast and accurate for text classification."
+    },
+    {
+      modelType: "SVM",
+      suitable: false,
+      reason: "May require extensive tuning for text data."
+    }
+  ]
 }];
 // Mock Model Insights
 export const mockModelInsights = [{
@@ -459,4 +525,10 @@ export const mockModelInsights = [{
   description: "KNN achieves surprisingly good results on digit recognition despite its simplicity, suggesting well-separated classes in the feature space.",
   datasetId: "digits",
   modelIds: ["knn"]
+}, {
+  id: "model_insight_9",
+  title: "Gradient Boosting Advantage",
+  description: "XGBoost and LightGBM demonstrate superior performance on text datasets by capturing complex patterns.",
+  datasetId: "sentiment",
+  modelIds: ["xgboost", "lightgbm"]
 }];
